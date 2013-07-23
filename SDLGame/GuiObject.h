@@ -13,9 +13,12 @@ private:
 	SDL_Rect sourceRect;
 	SDL_Rect destinationRect;
 
+	SDL_Surface *guiObjectSurface;
+
 public:
 
-	GuiObject(std::string guiPicturePathConstr, std::string guiPressedPicturePathConstr);
+	GuiObject(std::string guiPicturePathConstr, std::string guiPressedPicturePathConstr, SDL_Rect destinationRectConstr);
+	GuiObject(std::string guiPicturePathConstr, SDL_Rect destinationRectConstr);
 
 	GuiObject(void);
 	~GuiObject(void);
