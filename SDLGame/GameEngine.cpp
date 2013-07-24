@@ -3,7 +3,7 @@
 GameEngine::GameEngine(void)
 {
 	SDL_Init( SDL_INIT_EVERYTHING );
-    screen = SDL_SetVideoMode( 640, 480, 32, SDL_SWSURFACE );
+    screen = SDL_SetVideoMode( 800, 600, 32, SDL_HWSURFACE );
 	SDL_WM_SetCaption("Game", NULL );
 }
 

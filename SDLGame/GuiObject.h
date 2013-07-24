@@ -4,7 +4,7 @@
 
 class GuiObject
 {
-private:
+public:
 
 	std::string guiPicturePath;
 	std::string guiPressedPicturePath;
@@ -14,8 +14,7 @@ private:
 	SDL_Rect destinationRect;
 
 	SDL_Surface *guiObjectSurface;
-
-public:
+	SDL_Surface *guiPressedObjectSurface;
 
 	GuiObject(std::string guiPicturePathConstr, std::string guiPressedPicturePathConstr, SDL_Rect destinationRectConstr);
 	GuiObject(std::string guiPicturePathConstr, SDL_Rect destinationRectConstr);

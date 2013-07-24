@@ -9,6 +9,10 @@ GuiObject::GuiObject(std::string guiPicturePathConstr, std::string guiPressedPic
 {
 	guiPicturePath = guiPicturePathConstr;
 	guiPressedPicturePath = guiPressedPicturePathConstr;
+
+	guiObjectSurface = SDL_LoadBMP( guiPicturePath.c_str() );
+	guiPressedObjectSurface = SDL_LoadBMP( guiPressedPicturePath.c_str() );
+
 	destinationRect = destinationRectConstr;
 }
 
@@ -17,8 +21,9 @@ GuiObject::GuiObject(std::string guiPicturePathConstr, SDL_Rect destinationRectC
 	guiPicturePath = guiPicturePathConstr;
 	guiObjectSurface = SDL_LoadBMP( guiPicturePath.c_str() );
 	destinationRect = destinationRectConstr;
-
 }
+
+
 
 GuiObject::~GuiObject(void)
 {
