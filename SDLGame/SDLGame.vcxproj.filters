@@ -25,6 +25,18 @@
     <Filter Include="Source Files\GuiManager">
       <UniqueIdentifier>{25037c35-380b-4d90-834e-3678cf849f0a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameData">
+      <UniqueIdentifier>{451ddf36-fe0c-4d5c-b2fc-56c9fed2b51b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\Components">
+      <UniqueIdentifier>{c402d9ef-e7cf-449c-b500-a544a4990f9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\Components\GameComponent">
+      <UniqueIdentifier>{b1574945-0c3f-47b9-ae10-8a7097a8315d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\Components\DrawableGameEngineComponent">
+      <UniqueIdentifier>{d3e1c594-18cb-4ef8-b0c3-33e7bcd455a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,17 +48,17 @@
     <ClCompile Include="GameEngine.cpp">
       <Filter>Source Files\GameEngine</Filter>
     </ClCompile>
-    <ClCompile Include="MenuScreen.cpp">
-      <Filter>Source Files\ScreenManager</Filter>
+    <ClCompile Include="GameData.cpp">
+      <Filter>Source Files\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngineComponent.cpp">
+      <Filter>Source Files\GameEngine\Components\GameComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawableGameEngineComponent.cpp">
+      <Filter>Source Files\GameEngine\Components\DrawableGameEngineComponent</Filter>
     </ClCompile>
     <ClCompile Include="GameScreen.cpp">
-      <Filter>Source Files\GameEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="GuiSystem.cpp">
-      <Filter>Source Files\GuiManager</Filter>
-    </ClCompile>
-    <ClCompile Include="GuiObject.cpp">
-      <Filter>Source Files\GuiManager</Filter>
+      <Filter>Source Files\ScreenManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,16 +68,19 @@
     <ClInclude Include="GameEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameScreen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MenuScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GuiSystem.h">
+    <ClInclude Include="GameData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GuiObject.h">
+    <ClInclude Include="GameEngineComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawableGameEngineComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

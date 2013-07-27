@@ -1,5 +1,7 @@
 #include "InputHandler.h"
 #include "SDL.h"
+#include <list>
+#include "GameEngineComponent.h"
 
 
 
@@ -7,8 +9,6 @@ InputHandler::InputHandler(void)
 {
 	SDL_PollEvent (& event);
 }
-
-SDL_Event InputHandler::event;
 
 bool InputHandler::KeyDown(SDLKey key)
 {
@@ -44,8 +44,6 @@ int* InputHandler::GetMousePosition()
 
 	int mouseMotions[2];
 
-	SDL_GetMouseState(&mouseMotions[0], &mouseMotions[1]);
-
 	if( event.type == SDL_MOUSEMOTION)
 	{
 		/*mouseMotions[0] = event.motion.x;
@@ -60,6 +58,17 @@ int* InputHandler::GetMousePosition()
 	}
 
 	return mouseMotions;
+}
+
+void InputHandler::GetMousePosition(int &positionX, int &positionY)
+{
+	SDL_PollEvent(&event);
+	if( event.type == SDL_MOUSEMOTION)
+	{
+		positionX = event.motion.xrel;
+		positionY = event.motion.yrel;
+	}
+
 }
 
 bool InputHandler::MouseButtonDown(int mouseButton)
@@ -83,4 +92,16 @@ SDL_Event InputHandler::Event()
 
 InputHandler::~InputHandler(void)
 {
+}
+
+void InputHandler::Update()
+{
+	SDL_PollEvent(&event);
+	GameEngineComponent::Update();
+}
+
+void InputHandler::Initialize()
+{
+	SDL_PollEvent(&event);
+	GameEngineComponent::Initialize();
 }

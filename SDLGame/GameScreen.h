@@ -1,18 +1,23 @@
 #pragma once
-#include "gameengine.h"
+#include "drawablegameenginecomponent.h"
+#include <list>
+#include "GameEngineComponent.h"
 
-class GameScreen : public GameEngine
+class GameScreen : public DrawableGameEngineComponent
 {
-protected:
-	SDL_Surface screen;
+private:
+	std::list<GameEngineComponent> listOfGameComponents;
 
 public:
 	GameScreen(void);
 	~GameScreen(void);
 
-	virtual void Draw(SDL_Surface *screen);
-	virtual void Draw();
 	virtual void Update();
+	virtual void Draw();
+	virtual void Initialize();
+	virtual void UnloadContent();
+	virtual void LoadContent();
 
 };
+
 

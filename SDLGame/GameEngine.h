@@ -4,7 +4,7 @@
 class GameEngine
 {
 protected:
-	SDL_Surface *screen;
+	SDL_Surface *gameScreen;
 
 public:
 	SDL_Surface Screen();
@@ -16,6 +16,10 @@ public:
 
 	virtual void Draw();
 	virtual void Update();
+	virtual void Initialize();
+	virtual void GameLoop();
+	virtual void UnloadContent();
+	virtual void LoadContent();
 	
 };
 

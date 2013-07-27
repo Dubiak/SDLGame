@@ -1,20 +1,26 @@
 #pragma once
 #include "SDL.h"
+#include "GameEngineComponent.h"
 
-class InputHandler
+class InputHandler : public GameEngineComponent
 {
 private:
-	static SDL_Event event;
+	SDL_Event event;
 
 public:
 
 	SDL_Event Event();
 
-	static bool KeyDown(SDLKey key);
-	static bool KeyUp(SDLKey key);
+	bool KeyDown(SDLKey key);
+	bool KeyUp(SDLKey key);
 
-	static int* GetMousePosition();
-	static bool MouseButtonDown(int mouseButton);
+	int* GetMousePosition();
+	bool MouseButtonDown(int mouseButton);
+
+	void GetMousePosition(int &positionX, int &positionY);
+
+	void Update();
+	void Initialize();
 
 	InputHandler(void);
 	~InputHandler(void);

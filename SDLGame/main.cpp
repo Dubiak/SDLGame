@@ -2,17 +2,15 @@
 #include "InputHandler.h"
 #include "GameEngine.h"
 #include <cstdlib>
-#include "GameScreen.h"
-#include "GuiSystem.h"
+#include <string>
+
 
 SDL_Surface *guiSurface = NULL;
 
 //SDL_Event zdarzenie;
 bool wyjscie = false;
 GameEngine MyGameEngine;
-GameScreen MyGameScreen;
-//static InputHandler MyInputHandler;
-GuiSystem MainMenuGui;
+InputHandler MyInputHandler;
 
 int main( int argc, char * args[] )
 {
@@ -29,25 +27,19 @@ int main( int argc, char * args[] )
 	std::string newGamePath = "GameContent/MainMenuContent/GuiButtons/NewGame.bmp";
 	std::string pressedNewGamePath = "GameContent/MainMenuContent/GuiButtons/NewGamePressed.bmp";
 
-	GuiObject newGameButton(newGamePath, pressedNewGamePath, newGameRect);
-	MainMenuGui.AddGuiObjectToList(newGameButton);
-
 
     while( !wyjscie )
     {
-		if( InputHandler::KeyDown(SDLK_ESCAPE))
+		if( MyInputHandler.KeyDown(SDLK_ESCAPE))
         {
                 wyjscie = true;
         }
 
-		if( InputHandler::MouseButtonDown(SDL_BUTTON_LEFT))
+		if( MyInputHandler.MouseButtonDown(SDL_BUTTON_LEFT))
         {
                 wyjscie = true;
         }
-		
 
-		MainMenuGui.DrawAllGuiObjects(guiSurface);
-		MyGameScreen.Draw(guiSurface);
 
     }
 	

@@ -3,26 +3,35 @@
 
 GameScreen::GameScreen(void)
 {
-	/*GameScreen::GameEngine();*/
+	std::list<GameEngineComponent> listOfGameComponents;
+}
+
+void GameScreen::Draw()
+{
+	DrawableGameEngineComponent::Draw();
+}
+
+void GameScreen::UnloadContent()
+{
+	DrawableGameEngineComponent::UnloadContent();
+}
+
+void GameScreen::Update()
+{
+	DrawableGameEngineComponent::Update();
+}
+
+void GameScreen::LoadContent()
+{
+	DrawableGameEngineComponent::LoadContent();
+}
+
+void GameScreen::Initialize()
+{
+	DrawableGameEngineComponent::Initialize();
 }
 
 
 GameScreen::~GameScreen(void)
 {
-}
-
-void GameScreen::Draw(SDL_Surface *screen)
-{
-	SDL_BlitSurface( screen, NULL, GameEngine::screen, NULL );
-	GameEngine::Draw();
-}
-
-void GameScreen::Draw()
-{
-	GameEngine::Draw();
-}
-
-void GameScreen::Update()
-{
-
 }

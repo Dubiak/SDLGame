@@ -70,19 +70,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DrawableGameEngineComponent.cpp" />
+    <ClCompile Include="GameData.cpp" />
     <ClCompile Include="GameEngine.cpp" />
+    <ClCompile Include="GameEngineComponent.cpp" />
     <ClCompile Include="GameScreen.cpp" />
-    <ClCompile Include="GuiObject.cpp" />
-    <ClCompile Include="GuiSystem.cpp" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MenuScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DrawableGameEngineComponent.h" />
+    <ClInclude Include="GameData.h" />
     <ClInclude Include="GameEngine.h" />
+    <ClInclude Include="GameEngineComponent.h" />
     <ClInclude Include="GameScreen.h" />
-    <ClInclude Include="GuiObject.h" />
-    <ClInclude Include="GuiSystem.h" />
     <ClInclude Include="InputHandler.h" />
     <ClInclude Include="MenuScreen.h" />
   </ItemGroup>
